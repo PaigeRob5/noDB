@@ -39,7 +39,7 @@ import AdviceToDisplay from './AdviceToDisplay'
               Give Advice
               Topic<input onChange ={(e)=>this.setState({topic:e.target.value})}/>
               Advice<input onChange ={(e)=> this.setState({text:e.target.value})}/>
-              <button onClick ={() => this.addAdvice()}/>
+              <button onClick ={() => this.addAdvice()}>Go</button>
              {createdAdvice}
               </div>
               
