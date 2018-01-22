@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import AdviceToDisplay from './AdviceToDisplay'
+import './Have.css'
 
   export default class App extends Component {
     constructor(props) {
@@ -11,6 +12,7 @@ import AdviceToDisplay from './AdviceToDisplay'
               addedNewAdvice: []
 
           };
+          this.updateAddedNewAdvice = this.updateAddedNewAdvice.bind(this);
         }
 
         addAdvice(){
@@ -24,6 +26,11 @@ import AdviceToDisplay from './AdviceToDisplay'
               
               console.log(this.state.addedNewAdvice);
         }
+
+        updateAddedNewAdvice(newResults){
+            this.setState({addedNewAdvice:newResults})
+        }
+
         
 
     
@@ -31,14 +38,15 @@ import AdviceToDisplay from './AdviceToDisplay'
         render() {
             {
                 var createdAdvice = this.state.addedNewAdvice.map((newAdvice,i) =>{
-                return <AdviceToDisplay key = {i} advice ={newAdvice}/>
+                return <AdviceToDisplay key = {i} advice ={newAdvice} updateResults ={this.updateAddedNewAdvice}/>
                 })
             }
         return (
             <div>
-              Give Advice
-              Topic<input onChange ={(e)=>this.setState({topic:e.target.value})}/>
-              Advice<input onChange ={(e)=> this.setState({text:e.target.value})}/>
+              <header>Give Advice</header>
+            
+              Topic<input defaultValue = "What is the topic of your advice?"onChange ={(e)=>this.setState({topic:e.target.value})}/>
+              Advice<input defaultValue = "What is the advice you'd like to share?"onChange ={(e)=> this.setState({text:e.target.value})}/>
               <button onClick ={() => this.addAdvice()}>Go</button>
              {createdAdvice}
               </div>

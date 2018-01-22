@@ -28,6 +28,7 @@ export default class Modify extends Component{
             results =>{
                 this.props.updateResults(results.data)
             }).catch(console.log);
+        this.setState({edited:false});
 
     }
 

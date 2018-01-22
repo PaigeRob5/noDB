@@ -9,9 +9,11 @@ export default function AdviceToDisplay(props){
             <div>
             Topic: {props.advice.topic} 
             </div>
-            Value: {props.advice.text}
-            <Delete result={props.advice.id}/>
-            <Modify/>
+            <div>
+            Advice: {props.advice.text}
+            </div>
+            <Delete resultId={props.advice.id} updateResults = {props.updateResults}/>
+            <Modify result ={props.advice} updateResults = {props.updateResults}/>
         </div>
     
     )

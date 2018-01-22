@@ -21,7 +21,7 @@ module.exports ={
         id++
         let {topic,text}= req.body;
         advice.push({id,topic,text});
-        res.status(200).send(advice);
+        res.status(200).send([ advice[advice.length-1] ]);
     },
     read:(req,res)=>{
         if(req.query.topic){
@@ -32,6 +32,7 @@ module.exports ={
         else{
         res.status(200).send(advice);
         }},
+
     update:(req,res)=>{
             let {topic,text} =req.body;
             let searchID = req.params.id;
@@ -43,12 +44,13 @@ module.exports ={
                 topic: topic,
                 text: text
                  }
-                 res.status(200).send(advice);
+                 res.status(200).send( [ advice[advice.length-1] ]);
     },
     delete:(req,res)=>{
         let searchID = req.params.id;
-        let deleteIndex = advice.findIndex(advice => advice.id = searchID);
-        advice.splice(deleteIndex,1);
+        console.log(searchID);
+        advice = advice.filter(advice => advice.id != searchID);
+        
         res.status(200).send(advice);
     },
 }

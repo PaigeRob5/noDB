@@ -9,10 +9,11 @@ export default function SearchDisplay(props){
         <div className = "searchDisplayBox">
             <div>
            Topic: {props.result.topic} 
+                
            </div>
            Advice: {props.result.text} 
            <div>
-           <Delete result = {props.result.id} updateResults = {props.updateResults}/><Modify result ={props.result} updateResults = {props.updateResults}/>
+           <Delete resultId = {props.result.id} updateResults = {props.updateResults}/><Modify result ={props.result} updateResults = {props.updateResults}/>
            </div>
            
         </div>
