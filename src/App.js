@@ -15,15 +15,27 @@ class App extends Component {
   }
   render() {
     return (
-      <div className = "main">
       <div className="App">
-        <header className = "header">
-        Advice Generator
-        </header>
-        <Need/>
+      <header className="App-header">
+        <img/>
+        <h1 className="App-title">Advice Generator</h1>
+      </header>
+      <p className="Need">
+        <Need/> 
+      </p>
+      <p className ="Have">
         <Have/>
-        </div>
-      </div>
+      </p>
+    </div>
+      // <div className = "main">
+      // <div className="App">
+      //   <header className = "header">
+      //   Advice Generator
+      //   </header>
+      //   <Need/>
+      //   <Have/>
+      //   </div>
+      // </div>
     );
   }
 }

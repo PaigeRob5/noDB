@@ -1,16 +1,33 @@
-.header{
-  border-bottom: solid black;
-  font-size: 50px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
+.App {
   text-align: center;
 }
-.main{
-height: 100%;
-background:lightblue;
-font-size: 30px;
-text-align: center;
-padding: 20px
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
 }
 
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 5em;
+}
+
+.Need {
+  font-size: 2.5em;
+}
+.Have{
+  margin-top: 100px;
+  padding: 15px;
+  font-size:2.5em;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

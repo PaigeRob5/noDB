@@ -1,4 +1,22 @@
 input{
-    width:250px;
-    height: 10px
+    width: 35%;
+    height: 100%;
+    font-size: 20px;
+    text-align: center;
+}
+.subTopic{
+    margin-top: 20px;
+    font-size:20px;
+}
+button{
+    width:50px;
+    height:50px;
+    margin-right: 10px;
+    margin-left:10px;
+}
+.main{
+    border-top: black dashed;
+}
+header{
+    margin-top: 35px;
 }

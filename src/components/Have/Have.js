@@ -13,6 +13,7 @@ import './Have.css'
 
           };
           this.updateAddedNewAdvice = this.updateAddedNewAdvice.bind(this);
+          this.resetButton = this.resetButton.bind(this);
         }
 
         addAdvice(){
@@ -30,6 +31,9 @@ import './Have.css'
         updateAddedNewAdvice(newResults){
             this.setState({addedNewAdvice:newResults})
         }
+        resetButton(){
+            this.setState({addedNewAdvice:[]})
+        }
 
         
 
@@ -42,12 +46,13 @@ import './Have.css'
                 })
             }
         return (
-            <div>
-              <header>Give Advice</header>
+            <div className = "main">
+              <header>Give Advice:</header>
             
-              Topic<input defaultValue = "What is the topic of your advice?"onChange ={(e)=>this.setState({topic:e.target.value})}/>
-              Advice<input defaultValue = "What is the advice you'd like to share?"onChange ={(e)=> this.setState({text:e.target.value})}/>
+              <div className = "subTopic">What is the topic of your advice?</div><input defaultValue = "Topic"onChange ={(e)=>this.setState({topic:e.target.value})}/>
+              <div className ="subTopic">What is the advice you'd like to share?</div><input defaultValue = "Advice"onChange ={(e)=> this.setState({text:e.target.value})}/>
               <button onClick ={() => this.addAdvice()}>Go</button>
+              <button onClick = {() => this.resetButton()}>Reset</button>
              {createdAdvice}
               </div>
               
