@@ -1,6 +1,10 @@
 .displayBox{
-    width: 90vw;
-    padding: 10px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    width: 300px;
+    margin:auto;
+    font-size: 25px;
 }
+/* .buttons{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+} */

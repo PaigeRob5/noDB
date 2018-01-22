@@ -41,7 +41,7 @@ import SearchDisplay from './SearchDisplay';
           
         return (
               <div>
-              <div>Ask for Advice:</div>
+              <header>Ask for Advice:</header>
               <input defaultValue ="search a topic or just press go to see all advice"onChange ={(e) => this.setState({topicSearched: e.target.value})}/>
               <button onClick ={()=>this.search()}>Go</button>
               <button onClick ={this.resetButton}>Reset</button>

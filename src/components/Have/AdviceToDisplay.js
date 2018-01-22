@@ -12,8 +12,9 @@ export default function AdviceToDisplay(props){
             <div>
             Advice: {props.advice.text}
             </div>
-            <Delete resultId={props.advice.id} updateResults = {props.updateResults}/>
-            <Modify result ={props.advice} updateResults = {props.updateResults}/>
+            <div className ="buttons">
+            <Delete resultId={props.advice.id} updateResults = {props.updateResults}/><Modify result ={props.advice} updateResults = {props.updateResults}/>
+            </div>
         </div>
     
     )

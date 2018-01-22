@@ -27,15 +27,7 @@ class App extends Component {
         <Have/>
       </p>
     </div>
-      // <div className = "main">
-      // <div className="App">
-      //   <header className = "header">
-      //   Advice Generator
-      //   </header>
-      //   <Need/>
-      //   <Have/>
-      //   </div>
-      // </div>
+   
     );
   }
 }

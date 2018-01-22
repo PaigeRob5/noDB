@@ -1,4 +1,10 @@
 .searchDisplayBox{
-    width:90vw;
-    padding: 10px
+  width: 300px;
+  margin:auto;
+  font-size: 25px;
+
 }
+/* .buttons{
+    display: flex;
+    margin-bottom: 20px;
+} */

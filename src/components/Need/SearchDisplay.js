@@ -11,8 +11,8 @@ export default function SearchDisplay(props){
            Topic: {props.result.topic} 
                 
            </div>
-           Advice: {props.result.text} 
-           <div>
+            Advice: {props.result.text} 
+           <div className= "buttons">
            <Delete resultId = {props.result.id} updateResults = {props.updateResults}/><Modify result ={props.result} updateResults = {props.updateResults}/>
            </div>
            
