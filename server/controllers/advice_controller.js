@@ -44,7 +44,7 @@ module.exports ={
                 topic: topic,
                 text: text
                  }
-                 res.status(200).send( [ advice[advice.length-1] ]);
+                 res.status(200).send( [ advice[foundAdvice] ]);
     },
     delete:(req,res)=>{
         let searchID = req.params.id;

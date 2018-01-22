@@ -11,6 +11,7 @@ import SearchDisplay from './SearchDisplay';
             searchResults:[] 
           };
           this.updateSearchResults = this.updateSearchResults.bind(this)
+          this.resetButton = this.resetButton.bind(this)
         }
     
 
